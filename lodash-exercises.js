@@ -28,4 +28,29 @@ console.log("Sum of all ages is: " + totalages);
 
 /* Task four
    Write the code to calculate mean age of Gill family */
-console.log("The mean age is " + _.mean(getages));
+var getages2 = _.map(gillFamily, 'age');
+var mean = _.mean(getages, function(avg){
+	return _.sum(avg);
+	});
+console.log("The mean age is " + mean);
+
+
+
+/* Task five
+   Write the code to get the members of the gill family under the age of 50. */
+
+
+
+/* Task six
+   Write the code to calculate the number of members in the gill family. */
+
+
+
+/* Task seven
+   Write the code to calculate how many members of the gill family are under 50?. */
+
+
+
+/* Task eight 
+   Write the code to produce a comma seperated string of the Gill family members who are 
+   under 50's names with surnames. */
