@@ -18,5 +18,14 @@ var surname = _.map(gillFamily, function(person){
 console.log(surname);
 
 
-/* Task two
+/* Task three
    Write the code to sum the ages of the Gill family */
+var getages = _.map(gillFamily, 'age');
+var totalages = _.sum(getages);
+console.log("Sum of all ages is: " + totalages);
+
+
+
+/* Task four
+   Write the code to calculate mean age of Gill family */
+console.log("The mean age is " + _.mean(getages));
