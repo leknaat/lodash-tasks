@@ -71,6 +71,12 @@ var namesUnder50 = _.map(a, function(person){
 console.log(namesUnder50);
 
 
+
 /* Task nine
    Create a html table of Gill family members with name and age headings. 
    Display it on the page. */
+
+
+/* Task ten
+   Some gill family members are sensitive about their age. 
+   If the family member is over 26. Drop their age. */
