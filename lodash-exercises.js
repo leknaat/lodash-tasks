@@ -12,6 +12,11 @@ console.log(nameArray);
 
 /* Task two
    produce an array of the names of the gill family including surnames */
-var lastName = ['gill'];
-var surnames = _.union(gillFamily.name, lastName);
-console.log(surnames);
+var surname = _.map(gillFamily, function(person){
+	return person.name + ' gill';
+});
+console.log(surname);
+
+
+/* Task two
+   Write the code to sum the ages of the Gill family */
