@@ -45,12 +45,16 @@ console.log(under50);
 
 /* Task six
    Write the code to calculate the number of members in the gill family. */
-
+var familyMembers = _.size(gillFamily);
+console.log(familyMembers);
 
 
 /* Task seven
    Write the code to calculate how many members of the gill family are under 50?. */
-
+var famUnder50 = _.filter(gillFamily, function(young) {
+	return young.age < 50;
+});
+console.log(_.size(famUnder50));
 
 
 /* Task eight 
