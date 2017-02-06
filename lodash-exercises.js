@@ -128,4 +128,13 @@ console.log(youngest);
 
 /* Task fifteen
    Return the members of the Gill family who have an 'a' in their name. */
- 
+var aNames = _.filter(gillFamily, function(person){
+	return person.name.indexOf('a') > -1;
+});
+console.log(aNames);
+
+
+
+/* Task sixteen
+   Return the members of the Gill family, 
+   but with the first letter of their name capitalized. */
