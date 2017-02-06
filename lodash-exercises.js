@@ -75,13 +75,25 @@ console.log(namesUnder50);
 /* Task nine
    Create a html table of Gill family members with name and age headings. 
    Print the HTML as a string to the console. */
+var beginningOfHtml = '<html><thead><th>Name</th><th>Age</th></thead>';
+var middleOfHtml = '<tr><td>John</td><td>20</td></tr><tr><td>Richard</td><td>27</td></tr></tr><tr><td>Debbie</td><td>55</td></tr></tr>'
+var endOfHtml = '<tr><td>Dan</td><td>25</td></tr></tr><tr><td>Robin</td><td>60</td></tr></html>'
+var allHtml = beginningOfHtml + middleOfHtml + endOfHtml;
+console.log(allHtml); 
 
 
-
+console.log("task ten starts here so you don't get lost");
 /* Task ten
    Some gill family members are sensitive about their age. 
    If the family member is over 26. Drop their age. */
-
+var ageFilter = _.map(gillFamily, function (person){
+	if (person.age > 26) {
+		return (_.omit(person.age));
+	} else {
+		return person;
+	}
+});
+console.log(ageFilter);
 
 
 /* Task eleven
@@ -120,7 +132,7 @@ console.log(nameSort);
 /* Task fourteen
    Return the youngest member of the Gill family. */
 var youngest = _.min(gillFamily, function(youngest) {
-	return person.age;
+	return youngest.age;
 });
 console.log(youngest);
 
@@ -147,3 +159,9 @@ console.log(firstCap);
 
 /* Task seventeen
    Find the youngest member of the Gill family with an 'a' in their name. */
+var youngestA = _.filter(gillFamily, function(youngesta) {
+	if (_.min(youngesta.age)) {
+		return youngesta.name.indexOf('a') > -1;
+	}
+});
+console.log(youngestA);
