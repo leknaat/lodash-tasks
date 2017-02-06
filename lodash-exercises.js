@@ -76,13 +76,14 @@ console.log(namesUnder50);
    Create a html table of Gill family members with name and age headings. 
    Print the HTML as a string to the console. */
 var beginningOfHtml = '<html><thead><th>Name</th><th>Age</th></thead>';
-var middleOfHtml = '<tr><td>John</td><td>20</td></tr><tr><td>Richard</td><td>27</td></tr></tr><tr><td>Debbie</td><td>55</td></tr></tr>'
-var endOfHtml = '<tr><td>Dan</td><td>25</td></tr></tr><tr><td>Robin</td><td>60</td></tr></html>'
-var allHtml = beginningOfHtml + middleOfHtml + endOfHtml;
+var middleOfHtml = _.map(gillFamily, function(person){
+	return _.concat('<tr><td>' + person.name + '</td><td>' + person.age + '</td></tr>');
+}); 
+var endOfHtml = '</html>'
+var middleofHtmlJoined = _.join(middleOfHtml, "");
+var allHtml = beginningOfHtml + middleofHtmlJoined + endOfHtml;
 console.log(allHtml); 
 
-
-console.log("task ten starts here so you don't get lost");
 /* Task ten
    Some gill family members are sensitive about their age. 
    If the family member is over 26. Drop their age. */
