@@ -88,10 +88,25 @@ console.log(namesUnder50);
    Sort the gill family members by age. */
 var ageSort = _.sortBy(gillFamily, function(value){
 	return value.age;
-})
+});
 console.log(ageSort);
 
 
 
 /* Task twelve
    Find the Gill family members who's name starts with a 'D' */
+var dSort = _.filter(gillFamily, function(person){
+	return person.name[0] === 'd';
+});
+console.log(dSort);
+
+
+
+/* Task thirteen
+   Group the Gill family members who's names start with different letters.
+   result should look like (ordering doesn't matter):
+	{
+	  d: [{name: 'daniel', age: 25}, {name: 'debbie', age: 55}],
+	  j: [{name: 'john', age: 20}],
+	  r: [{name: 'robin', age: 60}, {name: 'richard', age: 27}],
+	} */
