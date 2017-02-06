@@ -74,9 +74,24 @@ console.log(namesUnder50);
 
 /* Task nine
    Create a html table of Gill family members with name and age headings. 
-   Display it on the page. */
+   Print the HTML as a string to the console. */
+
 
 
 /* Task ten
    Some gill family members are sensitive about their age. 
    If the family member is over 26. Drop their age. */
+
+
+
+/* Task eleven
+   Sort the gill family members by age. */
+var ageSort = _.sortBy(gillFamily, function(value){
+	return value.age;
+})
+console.log(ageSort);
+
+
+
+/* Task twelve
+   Find the Gill family members who's name starts with a 'D' */
