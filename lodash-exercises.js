@@ -110,3 +110,12 @@ console.log(dSort);
 	  j: [{name: 'john', age: 20}],
 	  r: [{name: 'robin', age: 60}, {name: 'richard', age: 27}],
 	} */
+var nameSort = _.groupBy(gillFamily, function(person){
+	return person.name[0];
+});
+console.log(nameSort);
+
+
+
+/* Task fourteen
+   Return the youngest member of the Gill family. */
