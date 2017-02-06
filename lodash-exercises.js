@@ -119,3 +119,13 @@ console.log(nameSort);
 
 /* Task fourteen
    Return the youngest member of the Gill family. */
+var youngest = _.min(gillFamily, function(youngest) {
+	return person.age;
+});
+console.log(youngest);
+
+
+
+/* Task fifteen
+   Return the members of the Gill family who have an 'a' in their name. */
+ 
