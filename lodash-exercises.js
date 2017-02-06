@@ -138,3 +138,12 @@ console.log(aNames);
 /* Task sixteen
    Return the members of the Gill family, 
    but with the first letter of their name capitalized. */
+var firstCap = _.map(gillFamily, function(person) {
+	return _.capitalize(person.name);
+});
+console.log(firstCap);
+
+
+
+/* Task seventeen
+   Find the youngest member of the Gill family with an 'a' in their name. */
