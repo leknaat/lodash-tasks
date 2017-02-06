@@ -77,7 +77,7 @@ console.log(namesUnder50);
    Print the HTML as a string to the console. */
 var beginningOfHtml = '<html><thead><th>Name</th><th>Age</th></thead>';
 var middleOfHtml = _.map(gillFamily, function(person){
-	return _.concat('<tr><td>' + person.name + '</td><td>' + person.age + '</td></tr>');
+	return ('<tr><td>' + person.name + '</td><td>' + person.age + '</td></tr>');
 }); 
 var endOfHtml = '</html>'
 var middleofHtmlJoined = _.join(middleOfHtml, "");
@@ -132,7 +132,7 @@ console.log(nameSort);
 
 /* Task fourteen
    Return the youngest member of the Gill family. */
-var youngest = _.min(gillFamily, function(youngest) {
+var youngest = _.minBy(gillFamily, function(youngest) {
 	return youngest.age;
 });
 console.log(youngest);
