@@ -88,7 +88,7 @@ console.log("task ten starts here so you don't get lost");
    If the family member is over 26. Drop their age. */
 var ageFilter = _.map(gillFamily, function (person){
 	if (person.age > 26) {
-		return (_.omit(person.age));
+		return (_.omit(person, 'age'));
 	} else {
 		return person;
 	}
@@ -141,7 +141,7 @@ console.log(youngest);
 /* Task fifteen
    Return the members of the Gill family who have an 'a' in their name. */
 var aNames = _.filter(gillFamily, function(person){
-	return person.name.indexOf('a') > -1;
+	return person.name.includes('a');
 });
 console.log(aNames);
 
@@ -159,9 +159,12 @@ console.log(firstCap);
 
 /* Task seventeen
    Find the youngest member of the Gill family with an 'a' in their name. */
-var youngestA = _.filter(gillFamily, function(youngesta) {
-	if (_.min(youngesta.age)) {
-		return youngesta.name.indexOf('a') > -1;
-	}
-});
+var youngestA = _
+.chain(gillFamily)
+.sortBy('age')
+.filter(function (person){
+	return person.name.includes('a');
+})
+.head()
+.value();
 console.log(youngestA);
